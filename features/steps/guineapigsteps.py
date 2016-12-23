@@ -8,7 +8,7 @@ def step_impl(context):
 
 @given('we are looking at the guinea pig website')
 def step_impl(context):
-  context.browser.get('https://saucelabs.com/test/guinea-pig')
+  context.browser.get('https://saucelabs-sample-test-frameworks.github.io/training-test-page')
   context.page = SauceGuineaPig(context.browser)
 
 @when('we click on the uncheck box')
@@ -30,7 +30,7 @@ def step_impl(context):
 
 @given('we are on the guinea pig website')
 def step_impl(context):
-  context.browser.get('https://saucelabs.com/test/guinea-pig')
+  context.browser.get('https://saucelabs-sample-test-frameworks.github.io/training-test-page')
   context.page = SauceGuineaPig(context.browser)
 
 @when('I click on the link')
