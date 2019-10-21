@@ -1,15 +1,13 @@
-Feature: Manipulating the guinea pig test website
+Feature: Login to Swag Labs
 
-  Scenario: We want to check the first box and populate the email field
+  Scenario: Valid Login
     Given we are on a browser
-    And we are looking at the guinea pig website
-    When we click on the uncheck box
-    Then it should be checked
-    When I populate the email field 
-    Then it should contain the value I entered
+    And we are on the swag labs site
+    When we login as a standard user
+    Then we should be on the inventory page
 
-  Scenario: We want to click on the link and verify it takes us to a new page
+  Scenario: Invalid Login
     Given we are on a browser
-    And we are on the guinea pig website
-    When I click on the link
-    Then I should see a new page  
+    And we are on the swag labs site
+    When we login as an invalid user 
+    Then it should raise an error
