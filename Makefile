@@ -1,11 +1,11 @@
 run_all_in_parallel:
-	make -j xp_chrome_41 xp_firefox_33 Windows7_ie_10
+	make -j chrome_case firefox_case ie_case
 
-xp_chrome_41:
-	browserName=chrome platform=XP version=41 behave-parallel/bin/behave --processes 12 --parallel-element scenario
+chrome_case:
+	browserName=chrome platform="Windows 10" version="latest" behave-parallel/bin/behave --processes 12 --parallel-element scenario
 
-xp_firefox_33:
-	browserName=firefox platform=XP version=33 behave-parallel/bin/behave --processes 12 --parallel-element scenario
+firefox_case:
+	browserName=firefox platform="Windows 10" version="latest" behave-parallel/bin/behave --processes 12 --parallel-element scenario
 
-Windows7_ie_10:
-	browserName="internet explorer" platform="Windows 7" version=10 behave-parallel/bin/behave --processes 12 --parallel-element scenario
+ie_case:
+	browserName="internet explorer" platform="Windows 10" version="latest" behave-parallel/bin/behave --processes 12 --parallel-element scenario
